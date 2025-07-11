@@ -20,7 +20,7 @@ def calculate_age(message):
         age_days = (today - dob.replace(year=today.year)).days if today >= dob.replace(year=today.year) else (today - dob.replace(year=today.year-1)).days
         bot.reply_to(message, f"Your age is: {age_years} years, {age_months} months, and {age_days} days.")
     except:
-        bot.reply_to(message, "❌ Please send date in DD-MM-YYYY format only.")
+        bot.reply_to(message, "❌ Please send date of birth in DD-MM-YYYY format only.")
 
 if __name__ == "__main__":
     keep_alive()
